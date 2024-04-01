@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnt74sdppgt2u"]
+
+[ext_resource type="Script" path="res://Code/Network.gd" id="1_cqsu4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cqsu4")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = -15.0
+text = "Host"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 0
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 35.0
+text = "Join"
+
+[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Join" to="." method="_on_join_button_down"]
